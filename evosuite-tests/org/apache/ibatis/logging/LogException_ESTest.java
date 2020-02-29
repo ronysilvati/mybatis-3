@@ -15,11 +15,32 @@ import org.junit.runner.RunWith;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class LogException_ESTest extends LogException_ESTest_scaffolding {
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Não
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se a classe LogException
+   * prepara a exceção corretamente, porém aparentemente nenhuma verificação
+   * adicional é efetuada.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test0()  throws Throwable  {
       LogException logException0 = new LogException("");
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se a classe LogException
+   * prepara a exceção corretamente uma instancia de LogException como
+   * parâmetro. A verificação, inclusive, se a segunda exceção preparada
+   * difere da primeira. 
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
       LogException logException0 = new LogException();
@@ -27,6 +48,17 @@ public class LogException_ESTest extends LogException_ESTest_scaffolding {
       assertFalse(logException1.equals((Object)logException0));
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se a classe LogException
+   * prepara a exceção corretamente a depender se é uma exceção padrão
+   * ou com mensagem personalizada. A verificação, inclusive, se a segunda
+   * exceção preparada difere da primeira.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       LogException logException0 = new LogException();
