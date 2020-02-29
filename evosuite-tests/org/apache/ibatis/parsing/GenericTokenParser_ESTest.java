@@ -19,6 +19,17 @@ import org.junit.runner.RunWith;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class GenericTokenParser_ESTest extends GenericTokenParser_ESTest_scaffolding {
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se o método parse
+   * se comporta como esperado, ao receber uma string que não
+   * contém os elementos necessários para fazer o parse.
+   * Como no caso da string (::).
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test0()  throws Throwable  {
       TokenHandler tokenHandler0 = mock(TokenHandler.class, new ViolatedAssumptionAnswer());
@@ -27,6 +38,17 @@ public class GenericTokenParser_ESTest extends GenericTokenParser_ESTest_scaffol
       assertEquals("nWg0h*Iwfz:6_", string0);
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível definir
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: Não foi possível definir o comportamento do teste.
+   * Aparentemente não foi gerada nenhuma verificação. Por esse
+   * motivo, não foi possível definir se o teste em questão é
+   * importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
       GenericTokenParser genericTokenParser0 = new GenericTokenParser("", "org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler", (TokenHandler) null);
@@ -34,6 +56,17 @@ public class GenericTokenParser_ESTest extends GenericTokenParser_ESTest_scaffol
       genericTokenParser0.parse("cB Xz$wpp$5");
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível definir
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: Não foi possível definir o comportamento do teste.
+   * Aparentemente não foi gerada nenhuma verificação. Por esse
+   * motivo, não foi possível definir se o teste em questão é
+   * importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       TokenHandler tokenHandler0 = mock(TokenHandler.class, new ViolatedAssumptionAnswer());
@@ -43,6 +76,16 @@ public class GenericTokenParser_ESTest extends GenericTokenParser_ESTest_scaffol
       genericTokenParser0.parse("<?S");
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível definir
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se o método parse
+   * funciona como esperado quando em tokenHandler0 é informado
+   * um valor nulo, por exemplo.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
       TokenHandler tokenHandler0 = mock(TokenHandler.class, new ViolatedAssumptionAnswer());
@@ -52,42 +95,23 @@ public class GenericTokenParser_ESTest extends GenericTokenParser_ESTest_scaffol
       assertEquals("HnullnSbG)b", string0);
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Não
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se o método parse
+   * se comporta como esperado, ao receber uma string que não
+   * contém os elementos necessários para fazer o parse.
+   * Como no caso da string (??). O teste em questão é desnecessário,
+   * já que o primeiro teste trata esse mesmo problema.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
       TokenHandler tokenHandler0 = mock(TokenHandler.class, new ViolatedAssumptionAnswer());
       GenericTokenParser genericTokenParser0 = new GenericTokenParser("?", "?", tokenHandler0);
       String string0 = genericTokenParser0.parse("org.apache.ibatis.parsing.GenericTokenParser");
       assertEquals("org.apache.ibatis.parsing.GenericTokenParser", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test5()  throws Throwable  {
-      TokenHandler tokenHandler0 = mock(TokenHandler.class, new ViolatedAssumptionAnswer());
-      GenericTokenParser genericTokenParser0 = new GenericTokenParser("?", "?", tokenHandler0);
-      String string0 = genericTokenParser0.parse("");
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test6()  throws Throwable  {
-      TokenHandler tokenHandler0 = mock(TokenHandler.class, new ViolatedAssumptionAnswer());
-      GenericTokenParser genericTokenParser0 = new GenericTokenParser("?", "?", tokenHandler0);
-      String string0 = genericTokenParser0.parse((String) null);
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test7()  throws Throwable  {
-      GenericTokenParser genericTokenParser0 = new GenericTokenParser("", "", (TokenHandler) null);
-      // Undeclared exception!
-      try { 
-        genericTokenParser0.parse("org.apache.ibatis.parsing.GenericTokenParser");
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-      }
   }
 }
