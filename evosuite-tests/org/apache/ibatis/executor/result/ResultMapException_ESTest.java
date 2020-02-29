@@ -15,6 +15,16 @@ import org.junit.runner.RunWith;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class ResultMapException_ESTest extends ResultMapException_ESTest_scaffolding {
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se a classe ResultMapException
+   * prepara a exceção corretamente a depender se é uma exceção padrão
+   * ou com mensagem personalizada.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test0()  throws Throwable  {
       ResultMapException resultMapException0 = new ResultMapException();
@@ -22,11 +32,31 @@ public class ResultMapException_ESTest extends ResultMapException_ESTest_scaffol
       assertFalse(resultMapException1.equals((Object)resultMapException0));
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se a classe ResultMapException
+   * prepara a exceção corretamente ao receber uma mensagem de erro como parâmetro
+   * da ResultMapException
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
       ResultMapException resultMapException0 = new ResultMapException("9=[y+q-sq9k|3(/0P");
   }
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se a classe ResultMapException
+   * prepara a exceção corretamente a depender se é uma exceção padrão
+   * ou com mensagem personalizada.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       ResultMapException resultMapException0 = new ResultMapException();
